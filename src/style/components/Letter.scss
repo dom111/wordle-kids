@@ -1,0 +1,18 @@
+.letter {
+  border: 1px solid #fff;
+  display: inline-block;
+  font-size: 3em;
+  height: 1em;
+  margin: .1em;
+  padding: .25em;
+  text-align: center;
+  width: 1em;
+
+  &.right {
+    background: #4d4;
+  }
+
+  &.wrong-place {
+    background: #dd4;
+  }
+}
