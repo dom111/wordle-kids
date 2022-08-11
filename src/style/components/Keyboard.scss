@@ -1,0 +1,31 @@
+.keyboard {
+  flex: 0;
+  padding: 0.75rem 0;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .letter {
+    border-color: #aaa;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    color: #ddd;
+    cursor: pointer;
+    font-size: min(6vw, 2rem);
+    height: min(9vw, 3rem);
+    margin: min(0.5vw, 0.4rem);
+    width: min(9vw, 3rem);
+
+    &[data-key='Backspace'] {
+      font-size: min(4vw, 1.5rem);
+    }
+
+    &[data-key='Enter'] {
+      font-size: min(5vw, 1.6666rem);
+      width: min(18vw, 6rem);
+    }
+  }
+}

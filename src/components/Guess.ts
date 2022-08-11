@@ -1,20 +1,19 @@
-import Element from './Element';
-import { h } from '../lib/html';
-import Letter from "./Letter";
-import {ScoreList} from "../Score";
+import Element, { h } from './Element';
+import Letter from './Letter';
+import { ScoreList } from '../Score';
 
 export class Guess extends Element {
   #letters: Letter[] = [];
-  #values: [string, string, string] = ['', '', ''];
+  #maxLength: number;
 
-  constructor() {
-    super(h('div.guess'));
+  constructor(maxLength: number) {
+    super('div.guess');
 
-    this.#letters.push(
-      new Letter(),
-      new Letter(),
-      new Letter(),
-    );
+    this.#maxLength = maxLength;
+
+    for (let i = 0; i < maxLength; i++) {
+      this.#letters.push(new Letter());
+    }
 
     this.element().append(
       ...this.#letters.map((letter: Letter) => letter.element())
@@ -22,17 +21,24 @@ export class Guess extends Element {
   }
 
   applyScore(score: ScoreList): void {
-    this.#letters.forEach((letter, index) =>
-      letter.highlight(score[index])
-    );
+    this.#letters.forEach((letter, index) => letter.highlight(score[index]));
   }
 
-  guess(): [string, string, string] {
-    return this.#letters.map((letter: Letter) => letter.value()) as [string, string, string];
+  clearError(): void {
+    this.element().classList.remove('error');
+  }
+
+  guess(): string[] {
+    return this.#letters.map((letter: Letter) => letter.value());
+  }
+
+  highlightError(): void {
+    this.element().classList.add('error');
   }
 
   length(): number {
-    return this.#letters.filter((letter: Letter): boolean => letter.hasValue()).length;
+    return this.#letters.filter((letter: Letter): boolean => letter.hasValue())
+      .length;
   }
 
   onInput(key: string) {
@@ -41,12 +47,14 @@ export class Guess extends Element {
     }
 
     if (key === 'Backspace') {
+      this.clearError();
+
       this.#letters[this.length() - 1].setValue('');
 
       return;
     }
 
-    if (this.length() === 3) {
+    if (this.length() === this.#maxLength) {
       return;
     }
 

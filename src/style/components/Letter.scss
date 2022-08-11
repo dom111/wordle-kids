@@ -1,18 +1,24 @@
 .letter {
-  border: 1px solid #fff;
-  display: inline-block;
-  font-size: 3em;
-  height: 1em;
-  margin: .1em;
-  padding: .25em;
+  align-items: center;
+  border: 0.1rem solid #fff;
+  display: flex;
+  font-size: 3rem;
+  font-weight: bold;
+  height: 4rem;
+  justify-content: center;
+  margin: 0.25rem;
   text-align: center;
-  width: 1em;
+  width: 4rem;
 
-  &.right {
-    background: #4d4;
+  &.wrong {
+    background: #777;
   }
 
   &.wrong-place {
-    background: #dd4;
+    background: #ec2;
+  }
+
+  &.right {
+    background: #293;
   }
 }

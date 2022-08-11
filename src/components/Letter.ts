@@ -1,12 +1,11 @@
-import Element from "./Element";
-import {h, t} from "../lib/html";
-import {Score, ScoreType} from "../Score";
+import Element, { t } from './Element';
+import { Score, ScoreType } from '../Score';
 
 export class Letter extends Element {
   #value: string = '';
 
   constructor() {
-    super(h('span.letter'));
+    super('span.letter');
   }
 
   hasValue(): boolean {
@@ -25,12 +24,18 @@ export class Letter extends Element {
 
       return;
     }
+
+    if (score === Score.WRONG) {
+      this.element().classList.add('wrong');
+
+      return;
+    }
   }
 
   setValue(value: string): void {
     this.#value = value;
 
-    this.element().childNodes.forEach((childNode) => childNode.remove());
+    this.empty();
     this.element().append(t(value));
   }
 

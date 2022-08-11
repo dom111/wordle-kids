@@ -2,9 +2,13 @@ export enum Score {
   UNKNOWN = -1,
   WRONG,
   WRONG_PLACE,
-  RIGHT
+  RIGHT,
 }
 
-export type ScoreType = Score.UNKNOWN | Score.WRONG | Score.WRONG_PLACE | Score.RIGHT;
+export type ScoreType =
+  | Score.UNKNOWN
+  | Score.WRONG
+  | Score.WRONG_PLACE
+  | Score.RIGHT;
 
-export type ScoreList = [ScoreType, ScoreType, ScoreType];
+export type ScoreList = ScoreType[];

@@ -1,4 +1,14 @@
 .guess {
   display: flex;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+
+  &.error {
+    // TODO: shake animation?
+    .letter {
+      background: #411;
+      border-color: #911;
+      color: #e11;
+    }
+  }
 }

@@ -1,14 +1,11 @@
-import Element from './Element';
-import { h, t } from '../lib/html';
+import Element, { h, t } from './Element';
 
 export class Header extends Element {
   constructor() {
     super(
-      h(
-        'nav',
-        h('h1', t('Wordle Kids')),
-        h('p', t('A kid-friendly Wordle clone with three-letter words.'))
-      )
+      'nav',
+      h('h1', t('Wordle Kids')),
+      h('p', t('A kid-friendly Wordle clone with small words.'))
     );
   }
 }
