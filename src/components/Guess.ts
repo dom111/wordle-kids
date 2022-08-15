@@ -7,7 +7,7 @@ export class Guess extends Element {
   #maxLength: number;
 
   constructor(maxLength: number) {
-    super('div.guess');
+    super('.guess');
 
     this.#maxLength = maxLength;
 
@@ -15,9 +15,7 @@ export class Guess extends Element {
       this.#letters.push(new Letter());
     }
 
-    this.element().append(
-      ...this.#letters.map((letter: Letter) => letter.element())
-    );
+    this.append(...this.#letters.map((letter: Letter) => letter.element()));
   }
 
   applyScore(score: ScoreList): void {
@@ -41,7 +39,7 @@ export class Guess extends Element {
       .length;
   }
 
-  onInput(key: string) {
+  onInput(key: string): void {
     if (key === 'Backspace' && this.length() === 0) {
       return;
     }

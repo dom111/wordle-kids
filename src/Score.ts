@@ -12,3 +12,5 @@ export type ScoreType =
   | Score.RIGHT;
 
 export type ScoreList = ScoreType[];
+
+export default Score;

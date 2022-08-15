@@ -1,0 +1,532 @@
+{
+  "words": [
+    {
+      "word": "ant",
+      "difficulty": 0,
+      "clues": ["Think small...", "Six legs...", "They live in nests..."]
+    },
+    {
+      "word": "ape",
+      "difficulty": 1
+    },
+    {
+      "word": "bat",
+      "difficulty": 0,
+      "clues": [
+        "Sometimes hanging upside down...",
+        "They fly...",
+        "They're furry..."
+      ]
+    },
+    {
+      "word": "bee",
+      "difficulty": 0
+    },
+    {
+      "word": "boa",
+      "difficulty": 2
+    },
+    {
+      "word": "bug",
+      "difficulty": 0
+    },
+    {
+      "word": "cat",
+      "difficulty": 0
+    },
+    {
+      "word": "cow",
+      "difficulty": 0
+    },
+    {
+      "word": "cub",
+      "difficulty": 1
+    },
+    {
+      "word": "dog",
+      "difficulty": 0
+    },
+    {
+      "word": "eel",
+      "difficulty": 1
+    },
+    {
+      "word": "elk",
+      "difficulty": 2
+    },
+    {
+      "word": "ewe",
+      "difficulty": 2
+    },
+    {
+      "word": "fly",
+      "difficulty": 0
+    },
+    {
+      "word": "fox",
+      "difficulty": 0
+    },
+    {
+      "word": "gnu",
+      "difficulty": 2
+    },
+    {
+      "word": "hen",
+      "difficulty": 0
+    },
+    {
+      "word": "hog",
+      "difficulty": 1
+    },
+    {
+      "word": "nit",
+      "difficulty": 1,
+      "clues": ["Makes me itchy thinking about it..."]
+    },
+    {
+      "word": "owl",
+      "difficulty": 1
+    },
+    {
+      "word": "pig",
+      "difficulty": 0
+    },
+    {
+      "word": "pup",
+      "difficulty": 0
+    },
+    {
+      "word": "ram",
+      "difficulty": 2
+    },
+    {
+      "word": "rat",
+      "difficulty": 0
+    },
+    {
+      "word": "yak",
+      "difficulty": 2
+    },
+
+    {
+      "word": "bear",
+      "difficulty": 0
+    },
+    {
+      "word": "bird",
+      "difficulty": 0
+    },
+    {
+      "word": "boar",
+      "difficulty": 1
+    },
+    {
+      "word": "clam",
+      "difficulty": 1
+    },
+    {
+      "word": "crab",
+      "difficulty": 1
+    },
+    {
+      "word": "crow",
+      "difficulty": 2
+    },
+    {
+      "word": "deer",
+      "difficulty": 0
+    },
+    {
+      "word": "dodo",
+      "difficulty": 2
+    },
+    {
+      "word": "dove",
+      "difficulty": 2
+    },
+    {
+      "word": "duck",
+      "difficulty": 0
+    },
+    {
+      "word": "fawn",
+      "difficulty": 2
+    },
+    {
+      "word": "fish",
+      "difficulty": 0
+    },
+    {
+      "word": "flea",
+      "difficulty": 1
+    },
+    {
+      "word": "foal",
+      "difficulty": 2
+    },
+    {
+      "word": "fowl",
+      "difficulty": 2
+    },
+    {
+      "word": "frog",
+      "difficulty": 0
+    },
+    {
+      "word": "gnat",
+      "difficulty": 2
+    },
+    {
+      "word": "gull",
+      "difficulty": 2
+    },
+    {
+      "word": "goat",
+      "difficulty": 1
+    },
+    {
+      "word": "hare",
+      "difficulty": 1
+    },
+    {
+      "word": "hawk",
+      "difficulty": 1
+    },
+    {
+      "word": "ibex",
+      "difficulty": 2
+    },
+    {
+      "word": "kiwi",
+      "difficulty": 2
+    },
+    {
+      "word": "lamb",
+      "difficulty": 1
+    },
+    {
+      "word": "lark",
+      "difficulty": 2
+    },
+    {
+      "word": "lice",
+      "difficulty": 2
+    },
+    {
+      "word": "lynx",
+      "difficulty": 2
+    },
+    {
+      "word": "mare",
+      "difficulty": 2
+    },
+    {
+      "word": "mink",
+      "difficulty": 1
+    },
+    {
+      "word": "mite",
+      "difficulty": 2
+    },
+    {
+      "word": "moth",
+      "difficulty": 1
+    },
+    {
+      "word": "mole",
+      "difficulty": 1
+    },
+    {
+      "word": "mule",
+      "difficulty": 1
+    },
+    {
+      "word": "mutt",
+      "difficulty": 2
+    },
+    {
+      "word": "newt",
+      "difficulty": 1
+    },
+    {
+      "word": "pony",
+      "difficulty": 1
+    },
+    {
+      "word": "puma",
+      "difficulty": 2
+    },
+    {
+      "word": "rook",
+      "difficulty": 2
+    },
+    {
+      "word": "seal",
+      "difficulty": 1
+    },
+    {
+      "word": "slug",
+      "difficulty": 0,
+      "clues": ["Leaves a slimy trail..."]
+    },
+    {
+      "word": "sole",
+      "difficulty": 2
+    },
+    {
+      "word": "stag",
+      "difficulty": 1
+    },
+    {
+      "word": "swan",
+      "difficulty": 1
+    },
+    {
+      "word": "tick",
+      "difficulty": 2
+    },
+    {
+      "word": "toad",
+      "difficulty": 1
+    },
+    {
+      "word": "tuna",
+      "difficulty": 2
+    },
+    {
+      "word": "vole",
+      "difficulty": 2
+    },
+    {
+      "word": "wasp",
+      "difficulty": 1
+    },
+    {
+      "word": "wolf",
+      "difficulty": 1
+    },
+    {
+      "word": "worm",
+      "difficulty": 1
+    },
+    {
+      "word": "wren",
+      "difficulty": 2
+    },
+
+    {
+      "word": "adder",
+      "difficulty": 2
+    },
+    {
+      "word": "aphid",
+      "difficulty": 2
+    },
+    {
+      "word": "bison",
+      "difficulty": 2
+    },
+    {
+      "word": "bunny",
+      "difficulty": 0
+    },
+    {
+      "word": "camel",
+      "difficulty": 1
+    },
+    {
+      "word": "chick",
+      "difficulty": 1
+    },
+    {
+      "word": "cobra",
+      "difficulty": 2
+    },
+    {
+      "word": "crane",
+      "difficulty": 2
+    },
+    {
+      "word": "dingo",
+      "difficulty": 2
+    },
+    {
+      "word": "drake",
+      "difficulty": 2
+    },
+    {
+      "word": "eagle",
+      "difficulty": 1,
+      "clues": ["Has excellent eyesight...", "Feathered predator..."]
+    },
+    {
+      "word": "finch",
+      "difficulty": 2
+    },
+    {
+      "word": "gecko",
+      "difficulty": 1,
+      "clues": [
+        "Can climb up walls with their sticky feet...",
+        "Often lick their own eyes..."
+      ]
+    },
+    {
+      "word": "goose",
+      "difficulty": 1
+    },
+    {
+      "word": "guppy",
+      "difficulty": 2
+    },
+    {
+      "word": "heron",
+      "difficulty": 1
+    },
+    {
+      "word": "hippo",
+      "difficulty": 0
+    },
+    {
+      "word": "horse",
+      "difficulty": 0
+    },
+    {
+      "word": "hound",
+      "difficulty": 1
+    },
+    {
+      "word": "husky",
+      "difficulty": 2
+    },
+    {
+      "word": "hyena",
+      "difficulty": 2
+    },
+    {
+      "word": "koala",
+      "difficulty": 1
+    },
+    {
+      "word": "larch",
+      "difficulty": 2
+    },
+    {
+      "word": "leech",
+      "difficulty": 2
+    },
+    {
+      "word": "lemur",
+      "difficulty": 1
+    },
+    {
+      "word": "llama",
+      "difficulty": 1
+    },
+    {
+      "word": "louse",
+      "difficulty": 1
+    },
+    {
+      "word": "macaw",
+      "difficulty": 2
+    },
+    {
+      "word": "mamba",
+      "difficulty": 2
+    },
+    {
+      "word": "mouse",
+      "difficulty": 0
+    },
+    {
+      "word": "mynah",
+      "difficulty": 2
+    },
+    {
+      "word": "otter",
+      "difficulty": 1
+    },
+    {
+      "word": "panda",
+      "difficulty": 0
+    },
+    {
+      "word": "puppy",
+      "difficulty": 0
+    },
+    {
+      "word": "raven",
+      "difficulty": 0
+    },
+    {
+      "word": "shark",
+      "difficulty": 0
+    },
+    {
+      "word": "sheep",
+      "difficulty": 0
+    },
+    {
+      "word": "shrew",
+      "difficulty": 1
+    },
+    {
+      "word": "skink",
+      "difficulty": 2
+    },
+    {
+      "word": "skunk",
+      "difficulty": 1
+    },
+    {
+      "word": "sloth",
+      "difficulty": 0
+    },
+    {
+      "word": "snail",
+      "difficulty": 0
+    },
+    {
+      "word": "snake",
+      "difficulty": 0
+    },
+    {
+      "word": "squid",
+      "difficulty": 0
+    },
+    {
+      "word": "stoat",
+      "difficulty": 0
+    },
+    {
+      "word": "stork",
+      "difficulty": 0
+    },
+    {
+      "word": "swine",
+      "difficulty": 2
+    },
+    {
+      "word": "tiger",
+      "difficulty": 0
+    },
+    {
+      "word": "viper",
+      "difficulty": 2
+    },
+    {
+      "word": "whale",
+      "difficulty": 0
+    },
+    {
+      "word": "whelk",
+      "difficulty": 2
+    },
+
+    {
+      "word": "zebra",
+      "difficulty": 1
+    }
+  ]
+}

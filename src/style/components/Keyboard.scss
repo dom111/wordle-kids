@@ -15,9 +15,13 @@
     color: #ddd;
     cursor: pointer;
     font-size: min(6vw, 2rem);
-    height: min(9vw, 3rem);
+    height: min(13.5vw, 4.5rem);
     margin: min(0.5vw, 0.4rem);
     width: min(9vw, 3rem);
+
+    @media (min-width: 1023px) {
+      height: min(9vw, 3rem);
+    }
 
     &[data-key='Backspace'] {
       font-size: min(4vw, 1.5rem);

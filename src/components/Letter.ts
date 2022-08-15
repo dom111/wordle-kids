@@ -1,5 +1,5 @@
 import Element, { t } from './Element';
-import { Score, ScoreType } from '../Score';
+import Score, { ScoreType } from '../Score';
 
 export class Letter extends Element {
   #value: string = '';
@@ -36,7 +36,7 @@ export class Letter extends Element {
     this.#value = value;
 
     this.empty();
-    this.element().append(t(value));
+    this.append(t(value));
   }
 
   value(): string {

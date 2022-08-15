@@ -1,7 +1,7 @@
 import Element from './Element';
-import Guess from './Guess';
 import Game from '../Game';
-import { Score } from '../Score';
+import Guess from './Guess';
+import Score from '../Score';
 
 export class Guesses extends Element {
   #game: Game;
@@ -17,7 +17,7 @@ export class Guesses extends Element {
 
   private addGuess(): void {
     this.#guesses.push(new Guess(this.#game.currentWordLength()));
-    this.element().append(this.currentGuess().element());
+    this.append(this.currentGuess().element());
 
     this.element().scrollTo({
       top: this.element().scrollHeight,

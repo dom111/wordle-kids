@@ -1,18 +1,17 @@
-import Element, { h, t } from './Element';
+import Element, { h, on, t } from './Element';
+import Game from '../Game';
 import Guesses from './Guesses';
 import Letter from './Letter';
-import Game from '../Game';
 
-export enum SpecialKey {
+enum SpecialKey {
   BACKSPACE = 'Backspace',
   ENTER = 'Enter',
 }
 
-export type SpecialKeys = SpecialKey.BACKSPACE | SpecialKey.ENTER;
+type SpecialKeys = SpecialKey.BACKSPACE | SpecialKey.ENTER;
 
 const specialKeyIcons = {
   [SpecialKey.BACKSPACE]: '⌫',
-  // [SpecialKey.ENTER]: '↲',
 };
 
 export class Keyboard extends Element {
@@ -31,7 +30,7 @@ export class Keyboard extends Element {
   constructor(guesses: Guesses, game: Game) {
     super('section.keyboard[autofocus]');
 
-    this.element().append(
+    this.append(
       ...this.#rows.map((keys) =>
         h(
           'section.row',
@@ -45,12 +44,10 @@ export class Keyboard extends Element {
 
             if (Object.prototype.hasOwnProperty.call(specialKeyIcons, key)) {
               letter.empty();
-              letter.element().append(t(specialKeyIcons[key] ?? key));
+              letter.append(t(specialKeyIcons[key] ?? key));
             }
 
-            letter
-              .element()
-              .addEventListener('click', () => this.handleInput(key));
+            letter.on('click', () => this.handleInput(key));
 
             return letter.element();
           })
@@ -65,9 +62,7 @@ export class Keyboard extends Element {
   }
 
   private bindKeyboard(): void {
-    document.addEventListener('keydown', (event) =>
-      this.handleInput(event.key)
-    );
+    on(document, 'keydown', (event) => this.handleInput(event.key));
   }
 
   private handleInput(key: string): void {
