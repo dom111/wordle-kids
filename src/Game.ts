@@ -1,76 +1,23 @@
-import Score, { ScoreList, ScoreType } from './Score';
+import Score, { ScoreList, ScoreType } from './Game/Score';
+import { ThemeDefinition, WordDefinition, getThemeByPath } from './Game/Theme';
+import { WordLengths, load as loadWordlist } from './Game/WordLists';
+import Difficulty from './Game/Difficulty';
 import InvalidOptions from './InvalidOptions';
-
-export enum Mode {
-  FREE_PLAY,
-  DAILY, // TODO
-  THEMED,
-  CUSTOM, // TODO
-}
-
-const modes = {
-  [Mode.FREE_PLAY]: 'Free Play',
-  [Mode.DAILY]: 'Daily',
-  [Mode.THEMED]: 'Themed',
-  [Mode.CUSTOM]: 'Custom',
-};
-
-type WordLengths = 3 | 4 | 5;
-
-export enum WordDifficulty {
-  EASY,
-  NORMAL,
-  HARD,
-}
-
-const difficulties = {
-  [WordDifficulty.EASY]: 'Easy',
-  [WordDifficulty.NORMAL]: 'Normal',
-  [WordDifficulty.HARD]: 'Hard',
-};
-
-interface ThemeDetails {
-  label: string;
-  path: string;
-}
-
-export const themes: ThemeDetails[] = [
-  {
-    label: 'Animals',
-    path: './lists/themes/animals.json',
-  },
-];
-
-const wordLists: { [key: number]: string } = {
-  3: './lists/3-letter.json',
-  4: './lists/4-letter.json',
-  5: './lists/5-letter.json',
-};
-
-interface ThemeDefinition {
-  words: WordDefinition[];
-}
-
-interface WordDefinition {
-  word: string;
-  difficulty: WordDifficulty;
-  clues: string[];
-}
-
-interface Options {
-  difficulty?: WordDifficulty;
-  lengths?: WordLengths[];
-  mode: Mode;
-  theme?: string;
-}
+import Mode from './Game/Mode';
 
 export class Game {
   #currentTarget: WordDefinition;
-  #difficulty: WordDifficulty;
+  #difficulty: Difficulty = Difficulty.EASY;
+  #lengths: WordLengths[];
   #letterStatuses: { [key: string]: ScoreType } = {};
   #mode: Mode;
+  #onStart: () => void;
   #theme: string = '';
   #validWords: string[] = [];
+
+  constructor(onStart: () => void) {
+    this.#onStart = onStart;
+  }
 
   private async addAllValidWords(lengths: WordLengths[]): Promise<void> {
     await Promise.all(lengths.map((length) => this.addValidWords(length)));
@@ -79,54 +26,29 @@ export class Game {
   // TODO: Support dynamic list provision (pass data in via hash, URL/specific lists) to allow kids to practice specific
   //  spellings etc - backed up by a list of known - kid safe - words.
   private async addValidWords(length: WordLengths): Promise<void> {
-    const response = await fetch(wordLists[length]);
+    const wordlist = await loadWordlist(length);
 
-    (await response.json()).forEach((word) =>
-      this.#validWords.push(word.toUpperCase())
-    );
+    wordlist.forEach((word) => this.#validWords.push(word.toUpperCase()));
+  }
+
+  currentTarget(): WordDefinition {
+    return this.#currentTarget;
   }
 
   currentWordLength(): WordLengths {
     return this.#currentTarget.word.length as WordLengths;
   }
 
-  difficulty(): string {
-    return difficulties[this.#difficulty];
-  }
-
-  async init(
-    { difficulty, mode, lengths, theme }: Options = {
-      difficulty: WordDifficulty.EASY,
-      lengths: [3, 4, 5],
-      mode: Mode.FREE_PLAY,
-    }
-  ): Promise<void> {
-    this.#mode = mode;
-    this.#difficulty = difficulty;
-
-    if (mode === Mode.THEMED && !theme) {
-      throw new InvalidOptions('Expected `theme` when using `Mode.THEMED`.');
-    }
-
-    if (mode === Mode.THEMED) {
-      await this.setThemedGame(theme, difficulty);
-
-      return;
-    }
-
-    if (mode === Mode.FREE_PLAY) {
-      await this.setFreePlay(lengths);
-
-      return;
-    }
+  difficulty(): Difficulty {
+    return this.#difficulty;
   }
 
   letterScore(letter: string): ScoreType {
     return this.#letterStatuses[letter] ?? Score.UNKNOWN;
   }
 
-  mode(): string {
-    return modes[this.#mode];
+  mode(): Mode {
+    return this.#mode;
   }
 
   score(guess: string[]): ScoreList {
@@ -160,6 +82,10 @@ export class Game {
       });
   }
 
+  setDifficulty(difficulty: Difficulty): void {
+    this.#difficulty = difficulty;
+  }
+
   private async setFreePlay(lengths: WordLengths[]): Promise<void> {
     await this.addAllValidWords(lengths);
 
@@ -175,19 +101,21 @@ export class Game {
     };
   }
 
+  setLengths(lengths: WordLengths[]): void {
+    this.#lengths = lengths;
+  }
+
+  setMode(mode: Mode): void {
+    this.#mode = mode;
+  }
+
   private async setThemedGame(
     theme: string,
-    difficulty: WordDifficulty
+    difficulty: Difficulty
   ): Promise<void> {
-    const [themeDetails] = themes.filter(
-      (themeDetails) => themeDetails.path === theme
-    );
+    const themeDetails = getThemeByPath(theme);
 
-    if (!themeDetails) {
-      throw new InvalidOptions('Unknown theme `${theme}`.');
-    }
-
-    this.#theme = themeDetails.label;
+    this.#theme = theme;
 
     const details = (await (
       await fetch(themeDetails.path)
@@ -205,6 +133,7 @@ export class Game {
       return lengths;
     }, []) as WordLengths[];
 
+    // TODO: check if we've already loaded the wordlists
     await this.addAllValidWords(lengths);
 
     // For themed games (any custom games) there might be words that aren't dictionary words, so ensure these are in
@@ -219,15 +148,41 @@ export class Game {
 
     const {
       word,
-      difficulty: wordDifficulty,
+      difficulty: Difficulty,
       clues,
     } = possibleWords[Math.floor(possibleWords.length * Math.random())];
 
     this.#currentTarget = {
       word: word.toUpperCase(),
-      difficulty: wordDifficulty,
+      difficulty: Difficulty,
       clues,
     };
+  }
+
+  setTheme(theme: string): void {
+    this.#theme = theme;
+  }
+
+  async start(): Promise<void> {
+    if (this.#mode === Mode.THEMED && !this.#theme) {
+      throw new InvalidOptions('Expected `theme` when using `Mode.THEMED`.');
+    }
+
+    if (this.#mode === Mode.THEMED) {
+      await this.setThemedGame(this.#theme, this.#difficulty);
+
+      this.#onStart();
+
+      return;
+    }
+
+    if (this.#mode === Mode.FREE_PLAY) {
+      await this.setFreePlay(this.#lengths);
+
+      this.#onStart();
+
+      return;
+    }
   }
 
   theme(): string {

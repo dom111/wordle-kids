@@ -1,5 +1,5 @@
 import Element, { t } from './Element';
-import Score, { ScoreType } from '../Score';
+import Score, { ScoreType } from '../Game/Score';
 
 export class Letter extends Element {
   #value: string = '';

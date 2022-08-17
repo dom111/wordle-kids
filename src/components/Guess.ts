@@ -1,6 +1,6 @@
-import Element, { h } from './Element';
+import Element from './Element';
 import Letter from './Letter';
-import { ScoreList } from '../Score';
+import { ScoreList } from '../Game/Score';
 
 export class Guess extends Element {
   #letters: Letter[] = [];

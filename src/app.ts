@@ -1,28 +1,27 @@
 import './style/app.scss';
 
-import Game, { Mode, WordDifficulty } from './Game';
+import Difficulty from './Game/Difficulty';
+import Game from './Game';
 import Guesses from './components/Guesses';
 import Header from './components/Header';
 import Keyboard from './components/Keyboard';
+import Mode from './Game/Mode';
+import { empty } from './components/Element';
+import { wordLengths } from './Game/WordLists';
 
-const game = new Game();
+const game = new Game(() => {
+  const header = new Header(game),
+    guesses = new Guesses(game),
+    keyboard = new Keyboard(guesses, game),
+    appContainer = document.getElementById('app');
 
-game
-  // TODO: display options to configure the game modes
-  .init({
-    mode: Mode.THEMED,
-    difficulty: WordDifficulty.EASY,
-    theme: './lists/themes/animals.json',
-  })
-  .then(() => {
-    const header = new Header(game),
-      guesses = new Guesses(game),
-      keyboard = new Keyboard(guesses, game),
-      appContainer = document.getElementById('app');
+  empty(appContainer);
 
-    appContainer.append(
-      header.element(),
-      guesses.element(),
-      keyboard.element()
-    );
-  });
+  appContainer.append(header.element(), guesses.element(), keyboard.element());
+});
+
+game.setDifficulty(Difficulty.EASY);
+game.setLengths(wordLengths);
+game.setMode(Mode.THEMED);
+game.setTheme('./lists/themes/animals.json');
+game.start();

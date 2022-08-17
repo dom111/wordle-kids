@@ -37,7 +37,10 @@ export const onEach:
   events.forEach((event) => on(target, event, handler, options));
 };
 
-export const h = (selector: string, ...childNodes: Node[]) => {
+export const h = <T extends HTMLElement = HTMLElement>(
+  selector: string,
+  ...childNodes: Node[]
+): T => {
   const [element] = parse(selector).map((selectors) =>
     selectors.reduce((element: HTMLElement | null, details) => {
       if (element === null && details.type !== 'tag') {
@@ -62,7 +65,7 @@ export const h = (selector: string, ...childNodes: Node[]) => {
 
   childNodes.forEach((childNode) => element.append(childNode));
 
-  return element;
+  return element as T;
 };
 
 export const t = (content: string): Text => document.createTextNode(content);

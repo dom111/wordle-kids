@@ -2,8 +2,17 @@ nav {
   flex: 0;
   padding: 0.5rem;
 
-  h1 {
-    margin: 0;
+  header {
+    display: flex;
+
+    h1 {
+      flex: 1;
+      margin: 0;
+    }
+
+    .actions {
+      align-self: center;
+    }
   }
 
   p {

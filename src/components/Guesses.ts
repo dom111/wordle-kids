@@ -1,7 +1,7 @@
 import Element from './Element';
 import Game from '../Game';
 import Guess from './Guess';
-import Score from '../Score';
+import Score from '../Game/Score';
 
 export class Guesses extends Element {
   #game: Game;

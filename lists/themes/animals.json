@@ -7,7 +7,11 @@
     },
     {
       "word": "ape",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": [
+        "Sometimes confused with a monkey...",
+        "A large family of larger animals..."
+      ]
     },
     {
       "word": "bat",
@@ -20,35 +24,58 @@
     },
     {
       "word": "bee",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["They dance to communicate...", "They help pollinate plants..."]
     },
     {
       "word": "boa",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["A large slithery animal..."]
     },
     {
       "word": "bug",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Think small...", "Many animals might be called this..."]
     },
     {
       "word": "cat",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": [
+        "A carnivore often kept as a pet...",
+        "Love curling up in small spaces..."
+      ]
     },
     {
       "word": "cow",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": [
+        "A large animal, often found in a farm...",
+        "The males have horns..."
+      ]
     },
     {
       "word": "cub",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": [
+        "The name for a baby animal...",
+        "Used for many different predators..."
+      ]
     },
     {
       "word": "dog",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": [
+        "An omnivore often kept as a pet...",
+        "Like to chew on bones..."
+      ]
     },
     {
       "word": "eel",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": [
+        "A long creature that lives in water...",
+        "Some of them can generate electricity!"
+      ]
     },
     {
       "word": "elk",
@@ -93,7 +120,7 @@
     },
     {
       "word": "pup",
-      "difficulty": 0
+      "difficulty": 1
     },
     {
       "word": "ram",
@@ -316,11 +343,17 @@
 
     {
       "word": "adder",
-      "difficulty": 2
+      "difficulty": 1,
+      "clues": ["Can be found slithering around in long grass..."]
     },
     {
       "word": "aphid",
-      "difficulty": 2
+      "difficulty": 1,
+      "clues": [
+        "Very small creature...",
+        "Usually look green...",
+        "Ladybirds love to eat them!"
+      ]
     },
     {
       "word": "bison",
@@ -328,11 +361,22 @@
     },
     {
       "word": "bunny",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": [
+        "These mammals live underground...",
+        "A cutesy name for this creature...",
+        "Ears sometimes point up, sometimes down...",
+        "Likes to hop!"
+      ]
     },
     {
       "word": "camel",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": [
+        "These mammals are often found in the desert...",
+        "They can store a lot of water in their bodies...",
+        "Known to spit to frighten away predators..."
+      ]
     },
     {
       "word": "chick",
@@ -348,7 +392,11 @@
     },
     {
       "word": "dingo",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": [
+        "A type of wild predator that hunts in packs...",
+        "Found in Australia..."
+      ]
     },
     {
       "word": "drake",
@@ -449,15 +497,25 @@
     },
     {
       "word": "panda",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": [
+        "Spends all day eating...",
+        "Found in South-East Asia...",
+        "A type of bear..."
+      ]
     },
     {
       "word": "puppy",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": [
+        "The name for a baby animal...",
+        "Often a pet at home...",
+        "Very playful..."
+      ]
     },
     {
       "word": "raven",
-      "difficulty": 0
+      "difficulty": 1
     },
     {
       "word": "shark",
@@ -473,11 +531,16 @@
     },
     {
       "word": "skink",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["This lizard can sometimes have a blue tongue..."]
     },
     {
       "word": "skunk",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": [
+        "A small mammal that lives in the woods...",
+        "Can make a bad smell to scare away predators..."
+      ]
     },
     {
       "word": "sloth",
@@ -493,7 +556,12 @@
     },
     {
       "word": "squid",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": [
+        "A sea-dwelling predator...",
+        "Can be small or giant...",
+        "Can spray ink..."
+      ]
     },
     {
       "word": "stoat",
@@ -501,7 +569,8 @@
     },
     {
       "word": "stork",
-      "difficulty": 0
+      "difficulty": 1,
+      "clues": ["A type of large bird..."]
     },
     {
       "word": "swine",
@@ -509,11 +578,16 @@
     },
     {
       "word": "tiger",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["A large predator that lives in plains...", "Often stripy..."]
     },
     {
       "word": "viper",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": [
+        "A fast-moving slithery creature...",
+        "Well-known for being venomous..."
+      ]
     },
     {
       "word": "whale",
