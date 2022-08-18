@@ -1,10 +1,40 @@
-import Element from './Element';
+import Element, { h } from './Element';
 
 export class Modal extends Element {
+  #contentArea: HTMLElement;
+
   constructor(...childNodes: Node[]) {
-    super('dialog', ...childNodes);
+    super('dialog[tabindex="0"]');
+
+    this.#contentArea = h('.content', ...childNodes);
+
+    this.element().append(this.#contentArea);
 
     document.body.append(this.element());
+
+    this.bindEvents();
+  }
+
+  append(...childNodes: Node[]): void {
+    this.#contentArea.append(...childNodes);
+  }
+
+  private bindEvents(): void {
+    this.on('click', (event) => {
+      if (event.target !== this.element()) {
+        return;
+      }
+
+      this.close();
+    });
+
+    this.on('keydown', (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') {
+        return;
+      }
+
+      this.close();
+    });
   }
 
   close(): void {
@@ -13,6 +43,12 @@ export class Modal extends Element {
 
   open(): void {
     this.element().setAttribute('open', '');
+
+    this.element().focus();
+  }
+
+  setLabel(label: string): void {
+    this.element().setAttribute('aria-label', label);
   }
 }
 

@@ -8,5 +8,17 @@ const wordLists: { [key: number]: string } = {
   5: './lists/5-letter.json',
 };
 
-export const load = (length: WordLengths) =>
-  fetch(wordLists[length]).then((response) => response.json());
+const wordListLoaders = new Map<number, Promise<string[]>>();
+
+export const load = (length: WordLengths): Promise<string[]> => {
+  if (!wordListLoaders.has(length)) {
+    wordListLoaders.set(
+      length,
+      fetch(wordLists[length]).then(
+        (response): Promise<string[]> => response.json()
+      )
+    );
+  }
+
+  return wordListLoaders.get(length);
+};

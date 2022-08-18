@@ -5,7 +5,7 @@ export class Letter extends Element {
   #value: string = '';
 
   constructor() {
-    super('span.letter');
+    super('span.letter[tabindex="-1"]');
   }
 
   hasValue(): boolean {

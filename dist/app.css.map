@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": ["../src/style/app.scss", "../src/style/components/Guess.scss", "../src/style/components/Guesses.scss", "../src/style/components/Header.scss", "../src/style/components/Keyboard.scss", "../src/style/components/Letter.scss"],
-  "sourcesContent": [null, null, null, null, null, null],
-  "mappings": "AAAA,KACE,aACA,uBACA,gBACA,wCAGF,KACE,gBACA,WACA,aACA,uBACA,uBAZF,SAgBA,KACE,aACA,sBACA,oCCnBF,OACE,aACA,mBACA,mBAIE,qBACE,gBACA,kBACA,WCVN,SACE,mBACA,aACA,SACA,sBACA,cCLF,IACE,OHDF,cGIE,WACE,aAEA,cACE,OHRN,SGYI,oBACE,kBAIJ,MHjBF,gBIAA,UACE,OJDF,iBIIE,eACE,aACA,mBACA,uBAGF,kBACE,kBJXJ,qBIaI,sBACA,WACA,eACA,wBACA,0BACA,uBACA,oBAEA,2BAXF,kBAYI,sBAGF,sCACE,0BAGF,kCACE,6BACA,qBC/BN,QACE,mBACA,wBACA,aACA,eACA,gBACA,YACA,uBLPF,cKSE,kBACA,WAEA,cACE,gBAGF,oBACE,gBAGF,cACE,gBLUA,0BADF,yBAEI,yCAIJ,+BACE,wCACA,6BAEA,0BAJF,+BAKI,gBAKN,8BAGI,4BAIA,iCAIA",
+  "sources": ["../src/style/app.scss", "../src/style/components/Guess.scss", "../src/style/components/Guesses.scss", "../src/style/components/Header.scss", "../src/style/components/Keyboard.scss", "../src/style/components/Letter.scss", "../src/style/components/Modal.scss", "../src/style/components/OptionsModal.scss"],
+  "sourcesContent": [null, null, null, null, null, null, null, null],
+  "mappings": "AAAA,KACE,aACA,uBACA,gBACA,wCAGF,KACE,gBACA,WACA,aACA,uBACA,uBAZF,SAgBA,KACE,aACA,sBACA,oCCnBF,OACE,aACA,mBACA,mBAIE,qBACE,gBACA,kBACA,WCVN,SACE,mBACA,aACA,SACA,sBACA,cCLF,IACE,OHDF,cGIE,WACE,aAEA,cACE,OHRN,SGYI,oBACE,kBAEA,2BACE,SHhBR,qBGkBQ,eACA,eACA,cACA,mBACA,sBACA,aAKN,MH5BF,gBIAA,UACE,OJDF,iBIIE,eACE,aACA,mBACA,uBAGF,kBACE,kBJXJ,qBIaI,sBACA,WACA,eACA,wBACA,0BACA,uBACA,oBAEA,2BAXF,kBAYI,sBAGF,sCACE,0BAGF,kCACE,6BACA,qBC/BN,QACE,mBACA,wBACA,aACA,eACA,gBACA,YACA,uBLPF,cKSE,kBACA,WAEA,cACE,gBAGF,oBACE,gBAGF,cACE,gBCrBJ,OACE,0BACA,SACA,aACA,uBACA,OACA,eACA,MACA,YACA,UAEA,aACE,aAGF,gBACE,gBACA,SNjBJ,mBMmBI,2BACA,mBNpBJ,aMsBI,eACA,SACA,kBCvBF,kBPDF,gBOKE,wBACE,SAEA,sCACE,aAGF,8BACE,OACA",
   "names": []
 }

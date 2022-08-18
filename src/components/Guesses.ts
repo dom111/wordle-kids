@@ -4,11 +4,14 @@ import Guess from './Guess';
 import Score from '../Game/Score';
 
 export class Guesses extends Element {
+  #complete: boolean = false;
   #game: Game;
   #guesses: Guess[] = [];
 
   constructor(game: Game) {
-    super('section.guesses');
+    super(
+      'section.guesses[tabindex="0"][aria-label="Enter your guess"][autofocus]'
+    );
 
     this.#game = game;
 
@@ -29,12 +32,15 @@ export class Guesses extends Element {
   }
 
   onInput(key: string): void {
+    if (this.#complete) {
+      return;
+    }
+
     const currentGuess = this.currentGuess().guess(),
       hasAllLetters =
         this.currentGuess().length() === this.#game.currentWordLength(),
       isGuessValid = this.#game.validate(currentGuess);
 
-    // TODO: Any other synonyms?
     if (key === 'Enter' && hasAllLetters && isGuessValid) {
       const score = this.#game.score(currentGuess);
 
@@ -42,6 +48,8 @@ export class Guesses extends Element {
 
       if (score.every((score) => score === Score.RIGHT)) {
         // Do celebration!
+        this.#complete = true;
+
         return;
       }
 

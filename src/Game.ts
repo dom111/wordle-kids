@@ -168,6 +168,8 @@ export class Game {
       throw new InvalidOptions('Expected `theme` when using `Mode.THEMED`.');
     }
 
+    this.#letterStatuses = {};
+
     if (this.#mode === Mode.THEMED) {
       await this.setThemedGame(this.#theme, this.#difficulty);
 

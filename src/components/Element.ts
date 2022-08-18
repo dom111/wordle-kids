@@ -77,6 +77,22 @@ export class Element {
     this.#element = h(selector, ...childNodes);
   }
 
+  addClass(...classes: string[]): void {
+    this.element().classList.add(...classes);
+  }
+
+  append(...nodes: Node[]): void {
+    return this.element().append(...nodes);
+  }
+
+  element(): HTMLElement {
+    return this.#element;
+  }
+
+  empty(): void {
+    empty(this.element());
+  }
+
   on<K extends keyof GlobalEventHandlersEventMap>(
     event: K,
     handler: (event: GlobalEventHandlersEventMap[K]) => void,
@@ -105,16 +121,8 @@ export class Element {
     onEach(this.element(), events, handler, options);
   }
 
-  append(...nodes: Node[]): void {
-    return this.element().append(...nodes);
-  }
-
-  element(): HTMLElement {
-    return this.#element;
-  }
-
-  empty(): void {
-    empty(this.element());
+  removeClass(...classes: string[]): void {
+    this.element().classList.remove(...classes);
   }
 }
 

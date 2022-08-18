@@ -1,8 +1,8 @@
 import Element, { h, on, t } from './Element';
+import Mode, { label as modeLabel } from '../Game/Mode';
 import Game from '../Game';
 import OptionsModal from './OptionsModal';
 import { label as difficultyLabel } from '../Game/Difficulty';
-import { label as modeLabel } from '../Game/Mode';
 import { label as themeLabel } from '../Game/Theme';
 
 export class Header extends Element {
@@ -13,9 +13,12 @@ export class Header extends Element {
       h(
         'h3',
         t(
-          `${modeLabel(game.mode())}${
-            game.theme() ? ` (${themeLabel(game.theme())})` : ''
-          } - ${difficultyLabel(game.difficulty())}`
+          modeLabel(game.mode()) +
+            (game.mode() === Mode.THEMED
+              ? ` (${themeLabel(game.theme())}) - ${difficultyLabel(
+                  game.difficulty()
+                )}`
+              : '')
         )
       ),
       h('p', t('A kid-friendly Wordle clone with small words and clues.')),
@@ -29,10 +32,19 @@ export class Header extends Element {
       hint = h('button[title="Get a hint"]', t('?')),
       options = h('button[title="Options"]', t('⚙'));
 
-    on(newGame, 'click', () => game.start());
-    on(hint, 'click', () => {
+    on(newGame, 'click', (event) => {
+      game.start();
+
+      event.preventDefault();
+      event.stopPropagation();
+    });
+
+    on(hint, 'click', (event) => {
       const currentClues = cluesContainer.childNodes.length,
         clues = game.currentTarget().clues ?? [];
+
+      event.preventDefault();
+      event.stopPropagation();
 
       if (currentClues === clues.length) {
         cluesContainer.append(h('p', t('No more clues!')));
@@ -44,7 +56,13 @@ export class Header extends Element {
 
       cluesContainer.append(h('p', t(clues[currentClues])));
     });
-    on(options, 'click', () => optionsModal.open());
+
+    on(options, 'click', (event) => {
+      optionsModal.open();
+
+      event.preventDefault();
+      event.stopPropagation();
+    });
 
     actions.append(newGame, hint, options);
   }
