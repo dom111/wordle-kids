@@ -1,4 +1,4 @@
-import Element from '@dom111/element';
+import Element, { emit } from '@dom111/element';
 import Game from '../Game';
 import Guess from './Guess';
 import Score from '../Game/Score';
@@ -19,17 +19,21 @@ export class Guesses extends Element {
     this.#game = game;
 
     this.addGuess();
+
+    this.bindEvents();
   }
 
   private addGuess(): void {
     this.#guesses.push(new Guess(this.#game.currentWordLength()));
     this.append(this.currentGuess().element());
 
-    requestAnimationFrame(() =>
-      this.element().scrollTo({
-        top: this.element().scrollHeight,
-      })
-    );
+    this.scrollToBottom();
+  }
+
+  bindEvents(): void {
+    const resizeObserver = new ResizeObserver(() => this.scrollToBottom());
+
+    resizeObserver.observe(this.element());
   }
 
   private currentGuess(): Guess {
@@ -56,10 +60,21 @@ export class Guesses extends Element {
         this.#complete = true;
         this.currentGuess().celebrate();
 
+        emit(this.element().ownerDocument, new CustomEvent('complete'));
+
         return;
       }
 
       this.addGuess();
+
+      emit(
+        this.element().ownerDocument,
+        new CustomEvent<{ guesses: number }>('incorrect-guess', {
+          detail: {
+            guesses: this.#guesses.length - 1,
+          },
+        })
+      );
 
       return;
     }
@@ -75,6 +90,14 @@ export class Guesses extends Element {
     if (key.match(/^[A-Z]$/i)) {
       this.currentGuess().onInput(key.toUpperCase());
     }
+  }
+
+  scrollToBottom(): void {
+    requestAnimationFrame(() =>
+      this.element().scrollTo({
+        top: this.element().scrollHeight,
+      })
+    );
   }
 }
 

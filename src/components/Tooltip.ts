@@ -1,4 +1,4 @@
-import Element, { on, t } from '@dom111/element';
+import Element, { emit, on, t } from '@dom111/element';
 import { h } from '../lib/Element';
 
 export class Tooltip extends Element {
@@ -20,12 +20,12 @@ export class Tooltip extends Element {
     on(this.#parent, 'mouseenter', () => this.show());
 
     on(this.#parent, 'mouseleave', () => this.hide());
+
+    on(this.element().ownerDocument, 'new-game', () => this.remove());
   }
 
   hide(): void {
     this.removeClass('show');
-
-    requestAnimationFrame(() => this.position());
   }
 
   position(): void {
@@ -34,22 +34,23 @@ export class Tooltip extends Element {
       `${this.#parent.offsetTop + this.#parent.offsetHeight + 10}px`
     );
 
-    // Calculate the centered left position
-    let left =
-      this.#parent.offsetLeft +
-      this.#parent.offsetWidth / 2 -
-      this.element().offsetWidth / 2;
-
     // Clamp left to keep tooltip within viewport
-    left = Math.max(
+    const left = Math.max(
       0,
-      Math.min(left, window.innerWidth - this.element().offsetWidth)
+      Math.min(
+        this.#parent.offsetLeft +
+          this.#parent.offsetWidth / 2 -
+          this.element().offsetWidth / 2,
+        window.innerWidth - this.element().offsetWidth
+      )
     );
     this.element().style.setProperty('left', `${left}px`);
   }
 
   show(): void {
     this.addClass('show');
+
+    requestAnimationFrame(() => this.position());
   }
 }
 

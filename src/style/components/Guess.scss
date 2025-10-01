@@ -14,7 +14,7 @@
 
   &.dance {
     .letter {
-      animation: 500ms infinite dance;
+      animation: 750ms 6 dance;
 
       @for $i from 1 through 12 {
         &:nth-child(#{$i}) {

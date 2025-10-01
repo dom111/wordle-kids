@@ -7,5 +7,12 @@ button.button {
   line-height: 0.5;
   margin-left: 0.25rem;
   padding: 0.75rem;
+  transform: scale(1);
+  transition: transform 0.2s, background-color 0.2s;
   vertical-align: middle;
+
+  &.highlight {
+    transform: scale(1.1);
+    background-color: #6d7;
+  }
 }
