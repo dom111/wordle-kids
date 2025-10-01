@@ -6,7 +6,11 @@ export class Button extends Element {
   constructor(label: string, title: string) {
     super(h('button.button', t(label)));
 
-    this.append(new Tooltip(title, this.element()));
+    const tooltip = new Tooltip(title, this.element());
+
+    this.element().ownerDocument.body.append(tooltip.element());
+
+    this.on('click', () => this.element().blur());
   }
 }
 

@@ -1,4 +1,4 @@
-import Element, { on, t } from '@dom111/element';
+import Element, { emit, on, t } from '@dom111/element';
 import Mode, { label as modeLabel } from '../Game/Mode';
 import Game from '../Game';
 import OptionsModal from './OptionsModal';
@@ -43,6 +43,8 @@ export class Header extends Element {
 
       event.preventDefault();
       event.stopPropagation();
+
+      emit(this.element().ownerDocument, new CustomEvent('new-game'));
     });
 
     hint.on('click', (event) => {
@@ -71,7 +73,27 @@ export class Header extends Element {
     });
 
     actions.append(newGame, hint, options);
+
+    on<CustomEventMap>(
+      this.element().ownerDocument,
+      'incorrect-guess',
+      ({ detail }) => {
+        if (detail.guesses > 2) {
+          hint.addClass('highlight');
+        }
+      }
+    );
+
+    on<CustomEventMap>(this.element().ownerDocument, 'complete', () => {
+      newGame.addClass('highlight');
+      hint.removeClass('highlight');
+    });
   }
+}
+
+interface CustomEventMap {
+  [event: string]: any;
+  'incorrect-guess': (event: CustomEvent<{ guesses: number }>) => void;
 }
 
 export default Header;
