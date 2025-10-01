@@ -139,7 +139,7 @@ export class OptionsModal extends Modal {
       setDifficulty = (difficulty: any) => {
         game.setDifficulty(toDifficulty(difficulty));
 
-        this.#options.difficulty = difficulty;
+        this.#options.difficulty = toDifficulty(difficulty);
 
         game.setOptions(this.#options);
       },
