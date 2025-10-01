@@ -24,6 +24,7 @@
     "prettier": "^2.7.1"
   },
   "dependencies": {
+    "@dom111/element": "^0.2.1",
     "css-what": "^6.1.0"
   }
 }

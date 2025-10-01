@@ -1,10 +1,11 @@
-import Element, { h } from './Element';
+import Element from '@dom111/element';
+import { h } from '../lib/Element';
 
 export class Modal extends Element {
   #contentArea: HTMLElement;
 
   constructor(...childNodes: Node[]) {
-    super('dialog[tabindex="0"]');
+    super(h('dialog[tabindex="0"]'));
 
     this.#contentArea = h('.content', ...childNodes);
 

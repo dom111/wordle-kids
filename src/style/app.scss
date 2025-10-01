@@ -21,6 +21,7 @@ body {
   height: calc(100vh - calc(100vh - 100%));
 }
 
+@include meta.load-css('components/Button');
 @include meta.load-css('components/Guess');
 @include meta.load-css('components/Guesses');
 @include meta.load-css('components/Header');
@@ -28,3 +29,4 @@ body {
 @include meta.load-css('components/Letter');
 @include meta.load-css('components/Modal');
 @include meta.load-css('components/OptionsModal');
+@include meta.load-css('components/Tooltip');

@@ -6,7 +6,7 @@ import Guesses from './components/Guesses';
 import Header from './components/Header';
 import Keyboard from './components/Keyboard';
 import Mode from './Game/Mode';
-import { empty } from './components/Element';
+import { empty } from '@dom111/element';
 import { wordLengths } from './Game/WordLists';
 
 const game = new Game(() => {
