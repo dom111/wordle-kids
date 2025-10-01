@@ -21,6 +21,8 @@ export class Header extends Element {
                 ? ` (${themeLabel(game.theme())}) - ${difficultyLabel(
                     game.difficulty()
                   )}`
+                : game.mode() === Mode.FREE_PLAY
+                ? ` - ${game.getOptions().wordLengths.join(', ')} letter words`
                 : '')
           )
         ),
@@ -88,6 +90,10 @@ export class Header extends Element {
       newGame.addClass('highlight');
       hint.removeClass('highlight');
     });
+
+    if (game.mode() !== Mode.THEMED) {
+      hint.element().setAttribute('hidden', '');
+    }
   }
 }
 

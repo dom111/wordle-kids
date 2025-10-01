@@ -1,13 +1,10 @@
 import './style/app.scss';
 
-import Difficulty from './Game/Difficulty';
 import Game from './Game';
 import Guesses from './components/Guesses';
 import Header from './components/Header';
 import Keyboard from './components/Keyboard';
-import Mode from './Game/Mode';
 import { empty } from '@dom111/element';
-import { wordLengths } from './Game/WordLists';
 
 const game = new Game(() => {
   const header = new Header(game),
@@ -20,8 +17,10 @@ const game = new Game(() => {
   appContainer.append(header.element(), guesses.element(), keyboard.element());
 });
 
-game.setDifficulty(Difficulty.EASY);
-game.setLengths(wordLengths);
-game.setMode(Mode.THEMED);
-game.setTheme('./lists/themes/animals.json');
+const options = game.getOptions();
+
+game.setDifficulty(options.difficulty);
+game.setLengths(options.wordLengths);
+game.setMode(options.mode);
+game.setTheme(options.theme);
 game.start();
