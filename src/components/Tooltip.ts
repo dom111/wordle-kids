@@ -33,16 +33,23 @@ export class Tooltip extends Element {
       'top',
       `${this.#parent.offsetTop + this.#parent.offsetHeight + 10}px`
     );
-    this.element().style.setProperty(
-      'left',
-      `${this.#parent.offsetLeft - this.element().offsetWidth / 2}px`
+
+    // Calculate the centered left position
+    let left =
+      this.#parent.offsetLeft +
+      this.#parent.offsetWidth / 2 -
+      this.element().offsetWidth / 2;
+
+    // Clamp left to keep tooltip within viewport
+    left = Math.max(
+      0,
+      Math.min(left, window.innerWidth - this.element().offsetWidth)
     );
+    this.element().style.setProperty('left', `${left}px`);
   }
 
   show(): void {
     this.addClass('show');
-
-    requestAnimationFrame(() => this.position());
   }
 }
 
