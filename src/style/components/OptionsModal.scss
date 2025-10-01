@@ -14,5 +14,9 @@ dialog.options {
       flex: 1;
       padding-right: 2rem;
     }
+
+    select {
+      min-width: 5rem;
+    }
   }
 }

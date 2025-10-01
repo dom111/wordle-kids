@@ -1,9 +1,10 @@
 import Score, { ScoreList, ScoreType } from './Game/Score';
-import { ThemeDefinition, WordDefinition, getThemeByPath } from './Game/Theme';
+import { ThemeDefinition, WordDefinition, getThemeById } from './Game/Theme';
 import { WordLengths, load as loadWordlist } from './Game/WordLists';
 import Difficulty from './Game/Difficulty';
 import InvalidOptions from './InvalidOptions';
 import Mode from './Game/Mode';
+import { defaultOptions, Options } from './components/OptionsModal';
 
 export class Game {
   #currentTarget: WordDefinition;
@@ -41,6 +42,13 @@ export class Game {
 
   difficulty(): Difficulty {
     return this.#difficulty;
+  }
+
+  getOptions(): Options {
+    return {
+      ...defaultOptions,
+      ...(JSON.parse(localStorage.getItem('options') || '{}') || {}),
+    };
   }
 
   letterScore(letter: string): ScoreType {
@@ -109,11 +117,15 @@ export class Game {
     this.#mode = mode;
   }
 
+  setOptions(options: Options): void {
+    localStorage.setItem('options', JSON.stringify(options));
+  }
+
   private async setThemedGame(
     theme: string,
     difficulty: Difficulty
   ): Promise<void> {
-    const themeDetails = getThemeByPath(theme);
+    const themeDetails = getThemeById(theme);
 
     this.#theme = theme;
 
