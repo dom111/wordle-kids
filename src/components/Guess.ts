@@ -1,13 +1,14 @@
-import Element from './Element';
+import Element from '@dom111/element';
 import Letter from './Letter';
 import { ScoreList } from '../Game/Score';
+import { h } from '../lib/Element';
 
 export class Guess extends Element {
   #letters: Letter[] = [];
   #maxLength: number;
 
   constructor(maxLength: number) {
-    super('.guess');
+    super(h('.guess'));
 
     this.#maxLength = maxLength;
 
@@ -20,6 +21,10 @@ export class Guess extends Element {
 
   applyScore(score: ScoreList): void {
     this.#letters.forEach((letter, index) => letter.highlight(score[index]));
+  }
+
+  celebrate() {
+    this.addClass('dance');
   }
 
   clearError(): void {

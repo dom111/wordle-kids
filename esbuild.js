@@ -5,28 +5,28 @@ const { build } = require('esbuild'),
     bundle: true,
     minify: true,
     sourcemap: true,
-    watch: false,
+    // watch: false,
     outdir: 'dist',
     plugins: [sassPlugin()],
     entryNames: '[dir]/[name]',
   };
 
-process.argv.forEach((arg) => {
-  if (arg === 'watch') {
-    buildOptions.watch = {
-      onRebuild(error, result) {
-        if (error) {
-          console.log('\x1b[31mError rebuilding:\x1b[0m');
-          console.error(error);
-
-          return;
-        }
-
-        console.log('\x1b[32mRebuilt.\x1b[0m');
-      },
-    };
-  }
-});
+// process.argv.forEach((arg) => {
+//   if (arg === 'watch') {
+//     buildOptions.watch = {
+//       onRebuild(error, result) {
+//         if (error) {
+//           console.log('\x1b[31mError rebuilding:\x1b[0m');
+//           console.error(error);
+//
+//           return;
+//         }
+//
+//         console.log('\x1b[32mRebuilt.\x1b[0m');
+//       },
+//     };
+//   }
+// });
 
 process.stdout.write(`Building... `);
 

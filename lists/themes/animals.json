@@ -79,266 +79,329 @@
     },
     {
       "word": "elk",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Has large antlers", "Like a moose"]
     },
     {
       "word": "ewe",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Baaaas", "Female sheep"]
     },
     {
       "word": "fly",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Buzzzz...", "Spider food"]
     },
     {
       "word": "fox",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Unsure what it says", "A bit like a red dog"]
     },
     {
       "word": "gnu",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Like an antelope", "Starts with a silent letter"]
     },
     {
       "word": "hen",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Boooock bock bock", "Lays eggs"]
     },
     {
       "word": "hog",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Like a pig", "Also if you don't share something"]
     },
     {
       "word": "nit",
       "difficulty": 1,
-      "clues": ["Makes me itchy thinking about it..."]
+      "clues": ["Makes me itchy thinking about it...", "Live in your hair"]
     },
     {
       "word": "owl",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Nocturnal hunter", "Hoot hoot!"]
     },
     {
       "word": "pig",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Oink, oink!"]
     },
     {
       "word": "pup",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Baby doggo", "Baby seal"]
     },
     {
       "word": "ram",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Sheep with horns", "Hit something hard, usually to open"]
     },
     {
       "word": "rat",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Dirty rodent"]
     },
     {
       "word": "yak",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Lives at high altitudes", "Useless when shaved..."]
     },
 
     {
       "word": "bear",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Like honey"]
     },
     {
       "word": "bird",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Flies", "Has a beak"]
     },
     {
       "word": "boar",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Wild pig"]
     },
     {
       "word": "clam",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Ocean dwelling mollusc", "Known for its shell"]
     },
     {
       "word": "crab",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Walks sideways", "Has pincers"]
     },
     {
       "word": "crow",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["A black bird (but not a blackbird)"]
     },
     {
       "word": "deer",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Oh...", "Bambi <3"]
     },
     {
       "word": "dodo",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Dead as a..."]
     },
     {
       "word": "dove",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Two turtle...", "White pigeon"]
     },
     {
       "word": "duck",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Often found in a pond", "Quaaaack!"]
     },
     {
       "word": "fawn",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Baby animal", "Bambi!"]
     },
     {
       "word": "fish",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Live in water", "Blub blub."]
     },
     {
       "word": "flea",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Make dogs and cats itchy"]
     },
     {
       "word": "foal",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Baby horse"]
     },
     {
       "word": "fowl",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Group of bird livestock", "Sounds like 'unpleasant'"]
     },
     {
       "word": "frog",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Live by the pond", "Like a lily pad", "Ribbit"]
     },
     {
       "word": "gnat",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Like a mosquito"]
     },
     {
       "word": "gull",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Seabird", "Cawwww!", "MINE!"]
     },
     {
       "word": "goat",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Billy", "The 'greatest'"]
     },
     {
       "word": "hare",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Big rabbit"]
     },
     {
       "word": "hawk",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Bird of prey"]
     },
     {
       "word": "ibex",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Goat with epic horns"]
     },
     {
       "word": "kiwi",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Also a fruit", "New Zealander"]
     },
     {
       "word": "lamb",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Baby sheep"]
     },
     {
       "word": "lark",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Type of bird", "Also a jape"]
     },
     {
       "word": "lice",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Makes you itchy"]
     },
     {
       "word": "lynx",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["A type of cat", "Also a deodorant"]
     },
     {
       "word": "mare",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Female horse"]
     },
     {
       "word": "mink",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Not a weasel", "Fine fur"]
     },
     {
       "word": "mite",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["A little something", "Nibbly"]
     },
     {
       "word": "moth",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Attracted to light", "Not a butterfly"]
     },
     {
       "word": "mole",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Terrible eyesight", "Live underground", "Great at digging"]
     },
     {
       "word": "mule",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["A famous crossbreed", "Part horse, part donkey"]
     },
     {
       "word": "mutt",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["A word for a dog"]
     },
     {
       "word": "newt",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["A small amphibian"]
     },
     {
       "word": "pony",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Like a little horse"]
     },
     {
       "word": "puma",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["A big cat"]
     },
     {
       "word": "rook",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["A bird", "Also a chess piece"]
     },
     {
       "word": "seal",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Dogs of the sea"]
     },
     {
       "word": "slug",
       "difficulty": 0,
-      "clues": ["Leaves a slimy trail..."]
+      "clues": ["Leaves a slimy trail...", "No shell"]
     },
     {
       "word": "sole",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["A type of fish", "Also on your feet..."]
     },
     {
       "word": "stag",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Has antlers", "A large male deer"]
     },
     {
       "word": "swan",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Magnificent", "Sometimes black"]
     },
     {
       "word": "tick",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Bloodsucker", "Love to hang out in long grass"]
     },
     {
       "word": "toad",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Croak!", "Not a frog"]
     },
     {
       "word": "tuna",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["A type of fish", "Chicken of the sea"]
     },
     {
       "word": "vole",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Live by rivers"]
     },
     {
       "word": "wasp",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Black and yellow", "Not friendly"]
     },
     {
       "word": "wolf",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Ancestor of dogs"]
     },
     {
       "word": "worm",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Poops soil"]
     },
     {
       "word": "wren",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Type of bird", "Little Jenny"]
     },
 
     {
@@ -357,7 +420,8 @@
     },
     {
       "word": "bison",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Also known as a buffalo", "'See ya Dad!'"]
     },
     {
       "word": "bunny",
@@ -380,15 +444,22 @@
     },
     {
       "word": "chick",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Baby bird"]
     },
     {
       "word": "cobra",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["A type of snake", "The king"]
     },
     {
       "word": "crane",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": [
+        "A type of bird",
+        "Also found on a building site",
+        "Maybe made of paper"
+      ]
     },
     {
       "word": "dingo",
@@ -400,7 +471,8 @@
     },
     {
       "word": "drake",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Male pond bird", "Maybe also a dragon"]
     },
     {
       "word": "eagle",
@@ -409,7 +481,8 @@
     },
     {
       "word": "finch",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Type of bird"]
     },
     {
       "word": "gecko",
@@ -421,79 +494,103 @@
     },
     {
       "word": "goose",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Silly..."]
     },
     {
       "word": "guppy",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Type of fish"]
     },
     {
       "word": "heron",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Fishes in the pond"]
     },
     {
       "word": "hippo",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Large territorial mammal", "Huge mouth"]
     },
     {
       "word": "horse",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Great for riding"]
     },
     {
       "word": "hound",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Another name for a dog", "The fox and the..."]
     },
     {
       "word": "husky",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Dog breed", "Working dog, lives in the cold", "Mush!"]
     },
     {
       "word": "hyena",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Undomesticated dog", "Feature in the Lion King"]
     },
     {
       "word": "koala",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": [
+        "Cute looking",
+        "Fuzzy",
+        "Not actually a bear",
+        "Eats eucalyptus"
+      ]
     },
     {
       "word": "larch",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Type of bird"]
     },
     {
       "word": "leech",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Bloodsucker", "Like a small worm"]
     },
     {
       "word": "lemur",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Cute primate", "Found in Madagascar"]
     },
     {
       "word": "llama",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Like a big sheep", "Not an alpaca"]
     },
     {
       "word": "louse",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Lots of different types", "Wood..."]
     },
     {
       "word": "macaw",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Brightly coloured bird", "Not enough letters for parrot"]
     },
     {
       "word": "mamba",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Type of snake", "Black..."]
     },
     {
       "word": "mouse",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Like cheese", "Eeeek!"]
     },
     {
       "word": "mynah",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Type of bird", "Great mimic"]
     },
     {
       "word": "otter",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Cute looking water-dwelling mammal"]
     },
     {
       "word": "panda",
@@ -515,19 +612,23 @@
     },
     {
       "word": "raven",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Nevermore"]
     },
     {
       "word": "shark",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Big fish", "Apex predator"]
     },
     {
       "word": "sheep",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Woolly mammal", "Baaa!"]
     },
     {
       "word": "shrew",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Small rodent", "Taming the..."]
     },
     {
       "word": "skink",
@@ -544,15 +645,18 @@
     },
     {
       "word": "sloth",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["V", "e", "r", "y", " ", "s", "l", "o", "w", "!"]
     },
     {
       "word": "snail",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Leaves a slimy trail", "Has a shell"]
     },
     {
       "word": "snake",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Slithers around", "Hissss!"]
     },
     {
       "word": "squid",
@@ -565,16 +669,18 @@
     },
     {
       "word": "stoat",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Not a weasel"]
     },
     {
       "word": "stork",
       "difficulty": 1,
-      "clues": ["A type of large bird..."]
+      "clues": ["A type of large bird...", "Supposedly delivers babies"]
     },
     {
       "word": "swine",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Another word for a pig"]
     },
     {
       "word": "tiger",
@@ -591,16 +697,19 @@
     },
     {
       "word": "whale",
-      "difficulty": 0
+      "difficulty": 0,
+      "clues": ["Sea-based mammal", "Largest creature on the planet"]
     },
     {
       "word": "whelk",
-      "difficulty": 2
+      "difficulty": 2,
+      "clues": ["Small mollusc"]
     },
 
     {
       "word": "zebra",
-      "difficulty": 1
+      "difficulty": 1,
+      "clues": ["Stripy mammal", "A bit like a horse"]
     }
   ]
 }

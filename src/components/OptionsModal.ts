@@ -1,13 +1,14 @@
-import Difficulty, {
+import {
   label as difficultyLabel,
   difficulties,
   toDifficulty,
 } from '../Game/Difficulty';
 import Mode, { label as modeLabel, modes, toMode } from '../Game/Mode';
-import { h, on, t } from './Element';
+import { on, t } from '@dom111/element';
 import Game from '../Game';
 import Modal from './Modal';
 import { themes } from '../Game/Theme';
+import { h } from '../lib/Element';
 
 const hideElement = (el: HTMLElement) => el.setAttribute('hidden', ''),
   showElement = (el: HTMLElement) => el.removeAttribute('hidden');

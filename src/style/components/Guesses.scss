@@ -4,4 +4,8 @@
   flex: 1 1;
   flex-direction: column;
   overflow: auto;
+
+  &:has(> :last-child:nth-child(1)) {
+    overflow: visible;
+  }
 }

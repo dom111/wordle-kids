@@ -19,11 +19,12 @@
   "author": "dom111 <dom111@users.noreply.github.com>",
   "license": "MIT",
   "devDependencies": {
-    "esbuild": "^0.15.0",
-    "esbuild-sass-plugin": "^2.3.1",
+    "esbuild": "^0.25.10",
+    "esbuild-sass-plugin": "^3.3.1",
     "prettier": "^2.7.1"
   },
   "dependencies": {
+    "@dom111/element": "^0.2.1",
     "css-what": "^6.1.0"
   }
 }

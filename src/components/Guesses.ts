@@ -1,7 +1,8 @@
-import Element from './Element';
+import Element from '@dom111/element';
 import Game from '../Game';
 import Guess from './Guess';
 import Score from '../Game/Score';
+import { h } from '../lib/Element';
 
 export class Guesses extends Element {
   #complete: boolean = false;
@@ -10,7 +11,9 @@ export class Guesses extends Element {
 
   constructor(game: Game) {
     super(
-      'section.guesses[tabindex="0"][aria-label="Enter your guess"][autofocus]'
+      h(
+        'section.guesses[tabindex="0"][aria-label="Enter your guess"][autofocus]'
+      )
     );
 
     this.#game = game;
@@ -22,9 +25,11 @@ export class Guesses extends Element {
     this.#guesses.push(new Guess(this.#game.currentWordLength()));
     this.append(this.currentGuess().element());
 
-    this.element().scrollTo({
-      top: this.element().scrollHeight,
-    });
+    requestAnimationFrame(() =>
+      this.element().scrollTo({
+        top: this.element().scrollHeight,
+      })
+    );
   }
 
   private currentGuess(): Guess {
@@ -49,6 +54,7 @@ export class Guesses extends Element {
       if (score.every((score) => score === Score.RIGHT)) {
         // Do celebration!
         this.#complete = true;
+        this.currentGuess().celebrate();
 
         return;
       }

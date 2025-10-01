@@ -1,11 +1,12 @@
-import Element, { t } from './Element';
+import Element, { t } from '@dom111/element';
 import Score, { ScoreType } from '../Game/Score';
+import { h } from '../lib/Element';
 
 export class Letter extends Element {
   #value: string = '';
 
   constructor() {
-    super('span.letter[tabindex="-1"]');
+    super(h('span.letter[tabindex="-1"]'));
   }
 
   hasValue(): boolean {

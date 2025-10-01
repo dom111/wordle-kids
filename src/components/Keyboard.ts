@@ -1,7 +1,8 @@
-import Element, { h, on, t } from './Element';
+import Element, { on, t } from '@dom111/element';
 import Game from '../Game';
 import Guesses from './Guesses';
 import Letter from './Letter';
+import { h } from '../lib/Element';
 
 enum SpecialKey {
   BACKSPACE = 'Backspace',
@@ -19,8 +20,6 @@ export class Keyboard extends Element {
   #guesses: Guesses;
   #lookup: { [key: string]: Letter } = {};
 
-  // TODO: Could this generated using https://developer.mozilla.org/en-US/docs/Web/API/KeyboardLayoutMap to match the
-  //  user's layout?
   #rows: (string | SpecialKeys)[][] = [
     ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
     ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
@@ -28,7 +27,7 @@ export class Keyboard extends Element {
   ];
 
   constructor(guesses: Guesses, game: Game) {
-    super('section.keyboard[autofocus]');
+    super(h('section.keyboard[autofocus]'));
 
     this.append(
       ...this.#rows.map((keys) =>
